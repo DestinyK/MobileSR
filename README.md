@@ -1,16 +1,26 @@
 MobileSR
 ------
 ------
-code
+Introduction
+----
+We describe an efficient super-resolution network, MobilSR, and proposes a newly-devised convolution, parallel- group convolution. Parallel-group convplution divides standard convolutions into four groups and introduces a shortcut of 1×1 convolution. It achieves approximate performance but reduces the number of parameters by four times compared to a standard convolution.
+* parallel group convolution
+![parallel group convolution](resource/parallel group convolution.png)
+* network
+![network](resource/network.png)
+* performance
+![performance](resource/performance.png)
+
+Code
 ----
 Clone this repository into any place you want.
 ```Bash
 git clone https://github.com/DestinyK/MobileSR
 cd MobileSR
 ```
-we refer to this [EDSR code](https://github.com/thstkdgus35/EDSR-PyTorch)
+We refer to this [EDSR code](https://github.com/thstkdgus35/EDSR-PyTorch)
 
-start
+Start
 ----
 ```Bash
 cd src
@@ -18,7 +28,7 @@ sh demo.sh
 ```
 You can find the result images from experiment/test/results folder.
 
-dataset
+Datasets
 -----
 We used [DIV2K](http://www.vision.ee.ethz.ch/~timofter/publications/Agustsson-CVPRW-2017.pdf) dataset to train our model. Please download it from [here](https://cv.snu.ac.kr/research/EDSR/DIV2K.tar) (7.1GB).
 
